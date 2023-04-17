@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div className="text-center bg-slate-800 p-8">
+      <div className="text-center bg-gray-800 p-8">
         <Link href="/">
           <h1 className="text-3xl text-white font-bold mt-4">Georgi&rsquo;s Blog</h1>
         </Link>
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body>
+      <body className="dark:bg-gray-900">
         {header}
         <div className="mx-auto mt-6 max-w-3xl px-6">
           {children}
