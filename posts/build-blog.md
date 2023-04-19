@@ -6,8 +6,9 @@ date: "17.04.2023"
 
 ## Introduction
 
-Starting a new project can be a daunting task, especially when you are using technologies that you are not familiar with. While coding the site for this blog, I realized that my method for building projects is very similar to the concept of Components in React. This means that I try to build devide my knowledge into separate components. This way it is easier for me to focus on the components that I need to learn or review and to simple use what I already know. Using this approach, starting new projects is not only more productive, but much for enjoyable.
-So I decided to write a post-mortem on how I built a static personal blog with Next.js. The primary focus of this guide is not on Next.js itself, but rather on the metaprocess of building a project and how to make it both fun and educational. The goal of this blog is to showacase how to build "components of knowledge" that can be reused in future projects, just like React components in web development. By breaking down tasks, learning new skills, and integrating our acquired knowledge, we can create a modular knowledge base that can be easily repurposed for various projects. This approach not only helps us complete projects more efficiently but also fosters growth as a developer.
+Starting a new project can be a daunting task, especially when you are using technologies that you are not familiar with. While coding the site for this blog, I realized that my method for building projects is very similar to the concept of Components in React. This means that I try to divide my knowledge into separate components. This way it is easier for me to focus on the components that I need to learn or review and to simple use what I already know. Using this approach, starting new projects is not only more productive, but much for enjoyable.
+
+So I decided to write a post-mortem on how I built a static personal blog with Next.js. The primary focus of this guide is not on Next.js itself, but rather on the metaprocess of building a project and how to make it both fun and educational. The goal of this blog is to showcase how to build "components of knowledge" that can be reused in future projects, just like React components in web development. By breaking down tasks, learning new skills, and integrating our acquired knowledge, we can create a modular knowledge base that can be easily repurposed for various projects. This approach not only helps us complete projects more efficiently but also fosters growth as a developer.
 
 ## Laying the foundations
 
@@ -21,7 +22,7 @@ Breaking down the project into smaller steps helps me focus on the task at hand 
 
 In this case, the end goal is to build a static personal blog with Next.js. I already knew how to use Next.js and was aware that it might not be the best tool for the job at first glance. Since it is a framework for building web applications that rely on JavaScript, it is not the best choice for a static site. However, I also knew that it is designed for server-side rendering, which means that it should be able to generate static pages.
 
-Equipped with knowledge of Next.js and a vague idea of how to use it, I began to think about the steps I need to take to get there and the components of knowledge I would need to acquire or refine. Below are the steps I came up with and why I broke them down into these particular tasks/components:
+Equipped with the knowledge of Next.js and a vague idea of how to use it, I began to think about the steps I need to take to get there and the components of knowledge I would need to acquire or refine. Below are the steps I came up with and why I broke them down into these particular tasks/components:
 
 1. Create a Next.js app - this is a basic starting point for any Next.js project;
 2. Design and implement a layout for the blog - it is often best to start with the layout and then fill in the content and functionality;
@@ -42,7 +43,7 @@ The most common places to look for inspiration are:
  - blogs and write-ups on blogs;
  - and more recently, chats with ChatGPT;
 
-In this case, I turned to YouTube and found a great tutorial by Pixegami.
+In this case, I turned to YouTube and found a great tutorial by [Pixegami](https://www.youtube.com/watch?v=Hiabp1GY8fA&ab_channel=pixegami).
 The tutorial was great because it more or less had broken the project into similar components.
 This way I could skim through the parts that I am familiar with and focus on the parts that I needed to learn.
 It was also very beneficial to see the project in action and to see how the author approached the problem.
@@ -73,7 +74,7 @@ I found this great article on [dark mode](https://tailwindcss.com/docs/dark-mode
 These articles helped me to understand how to implement dark mode and how to style the markdown content.
 
 After I had dark mode working, I was happy with the result.
-There are still some things that I would like to improve, like the formating of the paragrphs in the markdown.
+There are still some things that I would like to improve, like the formatting of the paragrphs in the markdown.
 But overall, it is a good version that can be used, so I decided to publish it on Vercel.
 
 ## Conclusion
