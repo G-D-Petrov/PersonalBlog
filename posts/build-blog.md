@@ -1,175 +1,89 @@
 ---
-title: "Build a static personal blog with Next.js"
-subtitle: "A step-by-step guide to build a static personal blog with Next.js"
+title: "Knowledge Components: A Guide to Building Software Projects"
+subtitle: "Learn how to approach projects and expand your knowledge base using a modular, component-driven mindset"
 date: "17.04.2023"
 ---
 
 ## Introduction
-In this day and age, it is important to have an online presence. \
-While social media is a great way to share your thoughts and ideas, it is not the best way to showcase your knowledge and expertise in your field. \
-It is also not the best way to attract job opportunities and consolidate your online presence. \
-Enter the personal blog. \
-Having a personal blog is a great way to build your own platform for sharing your thoughts, ideas, and projects with a wider audience, allowing you to contribute to the developer community. \
 
-In this article, we will build a static personal blog with Next.js, a React framework for building static and server-rendered applications. \
-We will use Markdown files to write our posts, and we will use the Next.js API to read the files and generate the pages for our posts. \
-We will also use Tailwind CSS to style our blog. \
-Finally, we will deploy our blog to Vercel.
+Starting a new project can be a daunting task, especially when you are using technologies that you are not familiar with. While coding the site for this blog, I realized that my method for building projects is very similar to the concept of Components in React. This means that I try to build devide my knowledge into separate components. This way it is easier for me to focus on the components that I need to learn or review and to simple use what I already know. Using this approach, starting new projects is not only more productive, but much for enjoyable.
+So I decided to write a post-mortem on how I built a static personal blog with Next.js. The primary focus of this guide is not on Next.js itself, but rather on the metaprocess of building a project and how to make it both fun and educational. The goal of this blog is to showacase how to build "components of knowledge" that can be reused in future projects, just like React components in web development. By breaking down tasks, learning new skills, and integrating our acquired knowledge, we can create a modular knowledge base that can be easily repurposed for various projects. This approach not only helps us complete projects more efficiently but also fosters growth as a developer.
 
-Let's get started!
+## Laying the foundations
 
-## Set Up
-Before you begin, make sure you have Node.js and npm installed on your system. Then, create a new Next.js project using the following command:
+As Stephen Covey said, "Begin with the end in mind." Before starting any project or task, I like to take a moment to think about the end goal:
 
-``` sh
-npx create-next-app@latest
-# or
-yarn create next-app
-# or
-pnpm create next-app 
-```
+- What do I want to achieve?
+- What are the steps I need to take to get there?
+- What are the components of knowledge that I need to acquire or refine?
 
-You can then open the folder that was created in your favourite editor, and we are ready to develop.
+Breaking down the project into smaller steps helps me focus on the task at hand and identify the "components of knowledge" that will be crucial for the project. These components are the building blocks of knowledge that we can reuse and repurpose in future projects. 
 
-## Styling of the posts
-To style our blog, we'll use Tailwind CSS, a utility-first CSS framework. First, install Tailwind CSS and its dependencies:
+In this case, the end goal is to build a static personal blog with Next.js. I already knew how to use Next.js and was aware that it might not be the best tool for the job at first glance. Since it is a framework for building web applications that rely on JavaScript, it is not the best choice for a static site. However, I also knew that it is designed for server-side rendering, which means that it should be able to generate static pages.
 
-``` sh
-npm install tailwindcss@latest
-```
+Equipped with knowledge of Next.js and a vague idea of how to use it, I began to think about the steps I need to take to get there and the components of knowledge I would need to acquire or refine. Below are the steps I came up with and why I broke them down into these particular tasks/components:
 
-Then, create a tailwind.config.js file in your project's root directory and add the following code:
+1. Create a Next.js app - this is a basic starting point for any Next.js project;
+2. Design and implement a layout for the blog - it is often best to start with the layout and then fill in the content and functionality;
+3. Read the posts from markdown files - I wanted to write my posts in markdown and have them automatically converted to HTML;
+4. Create separate pages for each post - Next.js allows us to create dynamic pages that can be accessed by their URL;
+5. Generate static pages for the posts - Next.js allows us to generate static pages for each post, making the site fast and SEO-friendly;
+6. Fix the styling of the blog - I wanted to use Tailwind CSS to style the blog and the individual posts;
+7. Host the app on Vercel - I wanted to use Vercel to host the app and take advantage of its serverless functions;
 
-``` js
-// tailwind.config.js
-module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class',
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
-Now, create a globals.css file inside the styles folder and import the Tailwind CSS styles:
+While I had a general understanding of how to perform most of these tasks, I had some gaps around points 4 and 5. Identifying these gaps allowed me to focus on acquiring the necessary knowledge components to move forward. And so, I moved to the next step: learning what I need to learn.
 
+## Seeking inspiration and knowledge
 
-``` css
-/* globals.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-```
+Whenever I need to learn something new, I like to start by looking for inspiration and examples.
+The most common places to look for inspiration are:
+ - other people's projects on GitHub;
+ - tutorials and guides on YouTube;
+ - blogs and write-ups on blogs;
+ - and more recently, chats with ChatGPT;
 
-We are ready to start building our blog.
+In this case, I turned to YouTube and found a great tutorial by Pixegami.
+The tutorial was great because it more or less had broken the project into similar components.
+This way I could skim through the parts that I am familiar with and focus on the parts that I needed to learn.
+It was also very beneficial to see the project in action and to see how the author approached the problem.
 
-## Building the layout
-In this step, we will create a RootLayout component that will include the header, main content, and footer sections of the blog.
+Normally, it would take more steps, but this project is fairly self-contained.
+So I was able to go from zero to a working blog with mostly the knowledge in this tutorial.
+If I hadn't been able to find this tutorial, I would have had to do more research and look for more inspiration.
+I would probably need to look at the Next.js documentation and the Tailwind CSS documentation.
+I would also need to look for libraries or approaches that address the points that I am not familiar with.
 
-The header will contain the blog title, subtitle, and a link to the homepage. The main content will display the blog posts, and the footer will contain the developer's name and a copyright message.
+## Knowledge Integration
 
-Create a new file called RootLayout.tsx inside the apps folder and add the following code:
+Now that I had the knowledge I needed, I could begin to integrate it into my project.
+I wrote as much of the code as I could from memory, and then I went back to the tutorial to fill in the gaps.
+This approach helped me to solidify my understanding of the concepts and technologies involved.
+And it also helped me to identify the gaps in my knowledge that I need to fill in the future.
 
-``` tsx
-// RootLayout.tsx
-import Image from "next/image";
-import Link from "next/link";
-import "styles/globals.css"
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  // Header and footer JSX code goes here
-  return (
-    <html>
-      <head />
-      <body className="dark:bg-gray-900">
-        {header}
-        <div className="mx-auto mt-6 max-w-3xl px-6">
-          {children}
-        </div>
-        {footer}
-      </body>
-    </html>
-  );
-}
-```
+After I had a working version, I started to experiment with the code and mostly the styling.
+I wanted to make the blog look and feel like my own, so I changed the colors and layouts and the general UX.
+Starting from a solid baseline, I was able to focus on a particular component of knowledge and experiment with it.
+This way I was able to proceed safely, knowing that I could always go back to the working version.
 
-## Reading the posts
-Create a new file called getPostMetadata.ts inside the components folder and add the following code:
+One of the big features that I wanted to implement was dark mode.
+I had seen it on other blogs and wanted to try it out.
+However, after some tinkering, I realized that I don't fully understand how the articles are styled after they are converted from markdown to HTML.
+I just couldn't get it to work properly, so I looked for help in the Tailwind CSS documentation.
+I found this great article on [dark mode](https://tailwindcss.com/docs/dark-mode) and this article on [the typography extension](https://tailwindcss.com/docs/typography-plugin).
+These articles helped me to understand how to implement dark mode and how to style the markdown content.
 
-``` ts
-// getPostMetadata.ts
-import fs from "fs";
-import matter from "gray-matter";
-import { PostMetadata } from "../components/PostMetadata";
+After I had dark mode working, I was happy with the result.
+There are still some things that I would like to improve, like the formating of the paragrphs in the markdown.
+But overall, it is a good version that can be used, so I decided to publish it on Vercel.
 
-const getPostMetadata = (): PostMetadata[] => {
-  // Read files from the 'posts' folder and get gray-matter data
-};
+## Conclusion
 
-export default getPostMetadata;
-```
+In this guide, we've explored a metaprocess for building software projects. By focusing on the metaprocess rather than the specific technology, we've demonstrated that this approach can be applied to any project or technology. This process can be broken into:
+- planning;
+- breaking down tasks;
+- seeking knowledge;
+- integrating what we've learned;
 
+As we tackle each step, we refine our understanding of the tools and technologies involved, thus creating a solid foundation of knowledge that can be repurposed in future projects. The process of overcoming challenges, such as the implementation of the dark mode feature, showcases the importance of continuous learning and problem-solving in a developer's growth.
 
-## Creating separate pages for each post
-
-Now, we will create a BlogPost component that will display individual blog posts. Create a new file called BlogPost.tsx inside the app/blog/[slug] folder and add the following code:
-
-``` tsx
-// BlogPost.tsx
-// Import necessary libraries and components
-const BlogPost = (props: any) => {
-  // Retrieve post content and metadata
-  // Render the blog post
-};
-
-export default BlogPost;
-```
-
-## Generating static pages for the posts
-
-To generate static pages for each blog post, we will use Next.js's getStaticProps and getStaticPaths functions. Update the BlogPost.tsx file with the following code:
-
-``` tsx
-// BlogPost.tsx
-import { GetStaticPaths, GetStaticProps } from 'next';
-import fs from 'fs';
-import matter from 'gray-matter';
-import Markdown from 'markdown-to-jsx';
-import getPostMetadata, { generateStaticParams } from '../../../components/getPostMetadata';
-
-// getPostContent function goes here
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = generateStaticParams();
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = getPostContent(params.slug);
-  return {
-    props: {
-      post,
-    },
-  };
-};
-
-// Rest of the BlogPost component code
-```
-
-## Fix the styling of the posts
-
-Once your blog is complete, you can host it on a platform like Vercel or Netlify. Follow the platform's documentation to set up continuous deployment for your Next.js app.
-
-## Hosting the app
-
-In this blog post, we walked through the process of developing a static personal blog for developers using Next.js. We built various components, read post data from markdown files, generated static pages for each post, and styled the blog using Tailwind CSS. With your new blog, you can now share your knowledge and expertise with the world. \
-**Happy blogging!**
+To conclude, when embarking on your next project, remember to focus on building your knowledge base and refining your skills through a systematic metaprocess. With this mindset, you'll not only complete projects but also grow as a developer.
